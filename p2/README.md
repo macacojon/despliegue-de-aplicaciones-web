@@ -149,3 +149,36 @@ Y verificamos las reglas impuestas:
 ![image](https://github.com/macacojon/despliegue-de-aplicaciones-web/assets/144774960/c655173c-b3f1-47fa-af46-e6a66719f2cd)
 
 ![image](https://github.com/macacojon/despliegue-de-aplicaciones-web/assets/144774960/c3bc8ecb-b487-4e7a-960a-db63782dbaf6)
+
+
+### 9
+
+1. *Esquema*: es el protocolo a utilizar para acceder a la web. Algunos de ellos son: http o https...
+2. *Dominio*: La dirección específica de una página en internet.
+3. *Subdiretorio*: Es la sub ruta especifica de cada ruta de una página. 
+4. *Parámetros*: Se utiliza usualmente para transportar información entre páginas.
+5. *Subenlace*: Se utiliza para ir a partes especificas de la página.
+6. *Puerto*: Puerto de la página. Por ejemplo 8080, 4444, 443...
+
+### 10
+
+Funciona de la siguiente manera.
+
+1. *Petición del cliente*: Cuando haces enter en una página web, le estas haciendo una petición.
+2. *Petición al servidor*: La petición viaja hasta al servidor.
+3. *El servidor procesa la petición*: El servidor recibe la petición y la procesa para enviar una respuesta.
+4. *El servidor envía la respuesta*: El servidor le envía la respuesta al cliente, en este caso sería una página web.
+5. *Cliente recibe la respuesta*: El cliente recibe la respuesta y en este caso, muestra la página.
+
+### 11
+
+Un archivo .htaccess es un archivo de configuración utilizado en servidores web Apache.
+
+Un ejemplo sería, si queremos que "http://ejemplo.com/producto/1", se vea como "http://ejemplo.com/index.php?producto=1", podemos usar este código:
+
+```sh
+RewriteEngine On
+RewriteRule ^producto/([^/]+)$ /index.php?producto=$1 [L]
+```
+
+Este sería el ejemplo, lo que hace es tomar la URL y redirigirla a la versión con parámetros que el servidor pueda entender.
